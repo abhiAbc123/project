@@ -1,7 +1,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-
 import { signupUser, setAuthToken} from "./api.js";
 
 function Signup() {
@@ -11,7 +10,6 @@ function Signup() {
 
   const navigate = useNavigate();
 
-  // Regular signup
   const handleSignup = async (e) => {
     e.preventDefault();
 
@@ -33,10 +31,8 @@ function Signup() {
     }
   };
 
-
-  
-
   return (
+    <>   
     <div
       className="d-flex align-items-center justify-content-center min-vh-100"
       style={{ background: "linear-gradient(135deg, #FF512F, #DD2476)" }}
@@ -105,6 +101,8 @@ function Signup() {
         </p>
       </div>
     </div>
+    
+    </>
   );
 }
 
